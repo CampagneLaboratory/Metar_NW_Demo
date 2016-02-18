@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="model.1_FastqKallistoCounts" file="1_FastqKallistoCounts.nf" />
+  <dependency className="model.workflow.config" file="nextflow.config" />
+  <dependency className="model.runLocal" file="runLocal.xml" />
+</dependenciesRoot>
+

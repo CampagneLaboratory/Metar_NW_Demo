@@ -329,6 +329,11 @@
         </node>
       </node>
     </node>
+    <node concept="19SGf9" id="6ULHXPF1A04" role="GZ$AB">
+      <node concept="19SUe$" id="6ULHXPF1A05" role="19SJt6">
+        <property role="19SUeA" value="Download reads from SRA, perform QC, estimate counts with Kallisto and combine sample counts into a combined matrix." />
+      </node>
+    </node>
   </node>
   <node concept="2ulcR8" id="6vUUoZG0cbK">
     <property role="TrG5h" value="Download_1M_Reads" />
@@ -372,58 +377,6 @@
       <property role="VuL0v" value="inutano" />
       <property role="GbyUj" value="sra-toolkit" />
       <property role="3zaeVo" value="false" />
-    </node>
-  </node>
-  <node concept="2$rMIF" id="VC5j7AxFCM">
-    <property role="TrG5h" value="FastqKallistoCounts" />
-    <node concept="2$rEH5" id="6vUUoZG0cco" role="2$rEHq">
-      <ref role="2$rEH4" node="6vUUoZG0cbK" resolve="Download_1M_Reads" />
-      <node concept="1uLkD0" id="6vUUoZG0eDz" role="1uLvPA">
-        <property role="TrG5h" value="reads" />
-      </node>
-      <node concept="1uYdA0" id="6vUUoZG0es$" role="1uLvPH">
-        <ref role="1uK_4X" node="6vUUoZG0c6y" resolve="ids" />
-      </node>
-    </node>
-    <node concept="1CVceo" id="6vUUoZG0c6y" role="2$L6iY">
-      <property role="TrG5h" value="ids" />
-      <node concept="2J_sx7" id="6vUUoZG0c6z" role="2$L62I">
-        <node concept="2J_g7P" id="6vUUoZG0cao" role="2J_sx6">
-          <property role="2J_vQ8" value="SRR1514132" />
-        </node>
-        <node concept="2J_g7P" id="6vUUoZG0can" role="2J_sx6">
-          <property role="2J_vQ8" value="SRR1514133" />
-        </node>
-        <node concept="2J_g7P" id="6vUUoZG0cam" role="2J_sx6">
-          <property role="2J_vQ8" value="SRR1514134" />
-        </node>
-        <node concept="2J_g7P" id="6vUUoZG0cal" role="2J_sx6">
-          <property role="2J_vQ8" value="SRR1514135" />
-        </node>
-        <node concept="2J_g7P" id="6vUUoZG0cak" role="2J_sx6">
-          <property role="2J_vQ8" value="SRR1514136" />
-        </node>
-        <node concept="2J_g7P" id="6vUUoZG0caj" role="2J_sx6">
-          <property role="2J_vQ8" value="SRR1514137" />
-        </node>
-        <node concept="2J_g7P" id="6vUUoZG0cai" role="2J_sx6">
-          <property role="2J_vQ8" value="SRR1514138" />
-        </node>
-        <node concept="2J_g7P" id="6vUUoZG0cah" role="2J_sx6">
-          <property role="2J_vQ8" value="SRR1514139" />
-        </node>
-        <node concept="2J_g7P" id="6vUUoZG0cag" role="2J_sx6">
-          <property role="2J_vQ8" value="SRR1514140" />
-        </node>
-        <node concept="2J_g7P" id="6vUUoZG0caf" role="2J_sx6">
-          <property role="2J_vQ8" value="SRR1514141" />
-        </node>
-      </node>
-    </node>
-    <node concept="19SGf9" id="VC5j7AxFCP" role="GZ$AB">
-      <node concept="19SUe$" id="VC5j7AxFCQ" role="19SJt6">
-        <property role="19SUeA" value="Align reasds with Kallisto" />
-      </node>
     </node>
   </node>
   <node concept="2EEQw1" id="36KDBnIVBm8">

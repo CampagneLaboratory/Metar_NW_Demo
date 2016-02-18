@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info>
+  <concept fqn="org.campagnelab.bash.nyosh.structure.NYoShAwareScript" />
+  <concept fqn="org.campagnelab.workflow.languages.structure.RScript" />
+  <concept fqn="org.campagnelab.workflow.structure.RichScript" />
+  <root nodeRef="r:3d5ada8c-2c34-4299-8508-48cdaad8e76c(model)/1074131815193033267">
+    <file name="runLocal.xml">
+      <unit id="1074131815193033267" at="1,0,26,10" name="model.runLocal" />
+    </file>
+  </root>
+  <root nodeRef="r:3d5ada8c-2c34-4299-8508-48cdaad8e76c(model)/328344664486154878">
+    <file name="1_FastqKallistoCounts.nf">
+      <node id="328344664486154996" at="33,0,40,0" concept="2" />
+    </file>
+  </root>
+  <root nodeRef="r:3d5ada8c-2c34-4299-8508-48cdaad8e76c(model)/3649526348551124133">
+    <file name="1_FastqKallistoCounts.nf">
+      <node id="3649526348551124231" at="14,0,21,0" concept="2" />
+    </file>
+  </root>
+  <root nodeRef="r:3d5ada8c-2c34-4299-8508-48cdaad8e76c(model)/5937854873901361884">
+    <file name="1_FastqKallistoCounts.nf">
+      <node id="5937854873901361892" at="51,0,95,0" concept="0" />
+    </file>
+  </root>
+  <root nodeRef="r:3d5ada8c-2c34-4299-8508-48cdaad8e76c(model)/8328113964066216161">
+    <file name="1_FastqKallistoCounts.nf">
+      <node id="8328113964066349542" at="107,0,153,0" concept="1" />
+    </file>
+  </root>
+</debug-info>
+
