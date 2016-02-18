@@ -48,6 +48,9 @@
       <concept id="4815694748123489004" name="org.campagnelab.metar.biomart.structure.ColumnCustomType" flags="ng" index="2qiqCR">
         <property id="4815694748123489005" name="columnType" index="2qiqCQ" />
       </concept>
+      <concept id="4815694748121409933" name="org.campagnelab.metar.biomart.structure.ColumnGroupRef" flags="ng" index="2qEm5m">
+        <reference id="4815694748121418824" name="ColumnGroup" index="2qEgij" />
+      </concept>
       <concept id="7860500036055963869" name="org.campagnelab.metar.biomart.structure.Database" flags="ng" index="2V6ofZ">
         <child id="873968672213749413" name="datasets" index="1KfzH5" />
       </concept>
@@ -71,6 +74,7 @@
       </concept>
       <concept id="873968672220744168" name="org.campagnelab.metar.biomart.structure.AttributeRef" flags="ng" index="1KEnK8">
         <reference id="873968672220744169" name="attribute" index="1KEnK9" />
+        <child id="4815694748117452121" name="columnGroupref" index="2q_oQ2" />
         <child id="4815694748115876248" name="types" index="2qZv53" />
       </concept>
       <concept id="873968672220744155" name="org.campagnelab.metar.biomart.structure.Attribute" flags="ng" index="1KEnKV">
@@ -378,7 +382,7 @@
     </node>
   </node>
   <node concept="2YPoW8" id="6E8buU4fq08">
-    <property role="TrG5h" value="DefaultStyle" />
+    <property role="TrG5h" value="HeatmapStyle" />
     <node concept="24aBtg" id="6E8buU4fq09" role="2YPqp2">
       <property role="TrG5h" value="MyOwnPalette" />
       <ref role="24aBtv" node="6E8buU4fq0e" resolve="MyOwnPalette" />
@@ -10115,10 +10119,10 @@
       </node>
       <node concept="1FHY16" id="6E8buU4fmIk" role="ZXjPg">
         <property role="S1EQ6" value="UQVETJSCUB" />
-        <ref role="L_9Jz" node="6E8buU4fq08" resolve="DefaultStyle" />
+        <ref role="L_9Jz" node="6E8buU4fq08" resolve="HeatmapStyle" />
         <node concept="1FHg$p" id="6E8buU4fmIm" role="1FHg$q">
-          <property role="ZHjxa" value="600" />
-          <property role="ZHjG8" value="600" />
+          <property role="ZHjxa" value="400" />
+          <property role="ZHjG8" value="500" />
           <property role="3ZMXzF" value="5" />
           <property role="TrG5h" value="heatmap" />
         </node>
@@ -10146,7 +10150,7 @@
         <property role="313rra" value="1" />
         <property role="313rrk" value="1" />
         <property role="TrG5h" value="preciew" />
-        <property role="31lnkE" value="false" />
+        <property role="31lnkE" value="true" />
         <node concept="1FHg$p" id="6XwKyRrYvun" role="319mBM">
           <property role="ZHjxa" value="200" />
           <property role="ZHjG8" value="200" />
@@ -10195,13 +10199,31 @@
         <property role="12rW4U" value="http://www.ensembl.org" />
         <ref role="1KrPA$" node="6E8buU4frkT" resolve="Ensembl Genes 83" />
         <ref role="1L9wCD" node="6E8buU4fron" resolve="Mus musculus genes (GRCm38.p4)" />
+        <node concept="1KEnK8" id="6ULHXPF1Asl" role="1KIcB_">
+          <ref role="1KEnK9" node="6E8buU4frpA" resolve="Ensembl Gene ID from feature" />
+          <node concept="2q4RLF" id="6ULHXPF1Asm" role="2qZv53">
+            <property role="2qiqCQ" value="string" />
+          </node>
+          <node concept="2qEm5m" id="6ULHXPF1AsP" role="2q_oQ2">
+            <ref role="2qEgij" node="6E8buU4fkIF" resolve="ID" />
+          </node>
+        </node>
         <node concept="3MlLWZ" id="6E8buU4frkP" role="gr_HF">
           <property role="TrG5h" value="resultFromBioMart" />
           <ref role="3MlLW5" node="6E8buU4frkQ" resolve="resultFromBioMart" />
           <node concept="3Mpm39" id="6E8buU4frkQ" role="3WeD9t">
             <property role="31Cu5t" value="&#9;" />
             <property role="TrG5h" value="resultFromBioMart" />
-            <node concept="31JHg8" id="6E8buU4fsHq" role="31JHgj">
+            <node concept="31JHg8" id="6ULHXPF1AsR" role="31JHgj">
+              <property role="TrG5h" value="Ensembl_Gene_ID_from_feature" />
+              <ref role="1YeEjl" to="9nc5:1ID5TXdv_9L" resolve="String" />
+              <node concept="3MzsTm" id="6ULHXPF1AsS" role="lGtFl">
+                <node concept="3MzsBX" id="6ULHXPF1AsT" role="3MztjM">
+                  <ref role="3MzsBM" node="6E8buU4fkIF" resolve="ID" />
+                </node>
+              </node>
+            </node>
+            <node concept="31JHg8" id="6ULHXPF1AsU" role="31JHgj">
               <property role="TrG5h" value="Description_from_feature" />
               <ref role="1YeEjl" to="9nc5:1ID5TXdv_9L" resolve="String" />
             </node>
