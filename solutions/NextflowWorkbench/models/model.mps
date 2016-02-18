@@ -466,7 +466,7 @@
           <ref role="3YE7sm" node="iewVIi_TaV" resolve="read2" />
         </node>
         <node concept="19SUe$" id="iewVIi_Tcs" role="19SJt6">
-          <property role="19SUeA" value="&#10;ls -ltr &#10;&#10;" />
+          <property role="19SUeA" value="&#10;" />
         </node>
       </node>
     </node>

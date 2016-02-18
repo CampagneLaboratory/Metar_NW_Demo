@@ -210,7 +210,7 @@ cat("STATEMENT_EXECUTED/7676436067297094548/\n");
 }
 )
 }
-png(file="/Users/fac2003/R_RESULTS/model/plot_UQVETJSCUB_5.png", width=600, height=600)
+png(file="/Users/fac2003/R_RESULTS/model/plot_UQVETJSCUB_5.png", width=400, height=500)
 plot_UQVETJSCUB(joined)
 ignore <- dev.off()
 cat("STATEMENT_EXECUTED/7676436067297094548/\n");
@@ -219,11 +219,11 @@ cat("STATEMENT_EXECUTED/7676436067297094548/\n");
 plot_PSLLDQBXQR = function(ignore) 
 {
 #par(mfrow=c(1,1)) 
-layout(matrix(c(1:1), byrow=TRUE, 1, 1), widths=c(600.0), heights=c(600.0))
+layout(matrix(c(1:1), byrow=TRUE, 1, 1), widths=c(400.0), heights=c(500.0))
  plot_UQVETJSCUB(joined)
 }
 
-png(file="/Users/fac2003/R_RESULTS/model/plot_PSLLDQBXQR_1.png", width=600.0, height=600.0)
+png(file="/Users/fac2003/R_RESULTS/model/plot_PSLLDQBXQR_1.png", width=400.0, height=500.0)
 plot_PSLLDQBXQR(null)
 ignore <- dev.off()
 cat("STATEMENT_EXECUTED/8025628038194132729/\n");
@@ -305,7 +305,7 @@ thisDataset<- "mmusculus_gene_ensembl";
 thisMart<-useMart("ENSEMBL_MART_ENSEMBL",dataset=thisDataset,host="www.ensembl.org");
 
 
-attributes<-c("description");filtersVector=c();valuesList=c();
+attributes<-c("ensembl_gene_id","description");filtersVector=c();valuesList=c();
 
 
 
@@ -313,7 +313,7 @@ attributes<-c("description");filtersVector=c();valuesList=c();
 filtersVector<-c(filtersVector, "chromosome_name");valuesList<-c(valuesList,list(fromList="11"));
 output<-getBM(attributes=attributes,mart=thisMart,filters=filtersVector,values=valuesList);
 
-colnames(output)<-c("Description_from_feature")
+colnames(output)<-c("Ensembl_Gene_ID_from_feature","Description_from_feature")
 return(data.table(output,key=colnames(output)));
 
 
