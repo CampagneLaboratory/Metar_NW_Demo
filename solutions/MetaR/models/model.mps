@@ -3,14 +3,14 @@
   <persistence version="9" />
   <languages>
     <use id="e633fc48-0aaf-45b5-9894-247b67cf0890" name="org.campagnelab.metar.biomart" version="0" />
-    <use id="5d6bde84-4ce4-4eb5-a37e-25a5edd55129" name="org.campagnelab.metar.tables" version="1" />
+    <use id="5d6bde84-4ce4-4eb5-a37e-25a5edd55129" name="org.campagnelab.metar.tables" version="2" />
     <use id="3b58810c-8431-4bbb-99ea-b4671e02dd13" name="org.campagnelab.metar.R" version="1" />
     <use id="5ec1cd3d-0a50-4049-a8fa-ae768d7baa25" name="org.campagnelab.mps.XChart" version="0" />
     <use id="43f31864-fc67-43f5-873e-ab79cc279a2d" name="org.campagnelab.styles" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
     <use id="ecc862c9-5ab5-42ef-8703-2039019fb338" name="org.campagnelab.metar.models" version="1" />
     <use id="040d3459-0033-45bb-b823-4cfd22657c15" name="org.campagnelab.metar.biomartToR" version="0" />
-    <use id="049ed9e7-0f0d-4814-a373-a4b21e15b59e" name="org.campagnelab.metar.limma" version="0" />
+    <use id="049ed9e7-0f0d-4814-a373-a4b21e15b59e" name="org.campagnelab.metar.limma" version="1" />
   </languages>
   <imports>
     <import index="wiqx" ref="r:6bfd7c1b-dea3-4f98-9ed3-bce7739b7a8d(org.campagnelab.metar.accessories.styles.colors)" />
@@ -116,6 +116,7 @@
       <concept id="8725455673819557579" name="org.campagnelab.metar.limma.structure.LimmaVoom" flags="ng" index="3cumlZ">
         <child id="8725455673819568087" name="countsTable" index="3cupLz" />
         <child id="8725455673819577719" name="destinationTable" index="3curr3" />
+        <child id="1922071611496850295" name="normalizedTable" index="1Izna5" />
       </concept>
     </language>
     <language id="3b58810c-8431-4bbb-99ea-b4671e02dd13" name="org.campagnelab.metar.R">
@@ -188,6 +189,7 @@
       </concept>
       <concept id="5703306641526702642" name="org.campagnelab.metar.tables.structure.HeatmapAnnotations" flags="ng" index="2tnku">
         <property id="6583618001731900686" name="clusterRows" index="2Lhm2Y" />
+        <reference id="4173876386489605878" name="idGroup" index="2wXwy3" />
         <child id="5703306641526703109" name="usages" index="2tncD" />
         <child id="6583618001716896682" name="scaling" index="2Mr_oq" />
       </concept>
@@ -256,7 +258,7 @@
       <concept id="8459500803719374384" name="org.campagnelab.metar.tables.structure.Plot" flags="ng" index="1FHg$p">
         <property id="8962032619586498917" name="width" index="ZHjxa" />
         <property id="8962032619586499111" name="height" index="ZHjG8" />
-        <property id="4166618652723451261" name="id" index="3ZMXzF" />
+        <property id="4166618652723451261" name="plotId" index="3ZMXzF" />
       </concept>
       <concept id="8459500803719286639" name="org.campagnelab.metar.tables.structure.Heatmap" flags="ng" index="1FHY16">
         <child id="5703306641526697040" name="annotations" index="2thHW" />
@@ -9799,6 +9801,13 @@
         <node concept="afgQW" id="6E8buU4fkXV" role="3cupLz">
           <ref role="afgo8" node="6E8buU4fkHl" resolve="GSE59364_DC_all.csv" />
         </node>
+        <node concept="3MlLWZ" id="5pH_vt2uqi$" role="1Izna5">
+          <ref role="3MlLW5" node="5pH_vt2uqi_" resolve="normalized" />
+          <node concept="3Mpm39" id="5pH_vt2uqi_" role="3WeD9t">
+            <property role="31Cu5t" value="&#9;" />
+            <property role="TrG5h" value="normalized" />
+          </node>
+        </node>
       </node>
       <node concept="3WuldX" id="6E8buU4fkZu" role="ZXjPg">
         <property role="8NYsT" value="false" />
@@ -10139,6 +10148,7 @@
         </node>
         <node concept="2tnku" id="6E8buU4fnTi" role="2thHW">
           <property role="2Lhm2Y" value="true" />
+          <ref role="2wXwy3" node="6E8buU4fkIF" resolve="ID" />
           <node concept="2Mr_BI" id="6E8buU4fnTk" role="2Mr_oq" />
           <node concept="2tndn" id="6E8buU4fnTm" role="2tncD">
             <ref role="2tne1" node="6E8buU4fkNs" resolve="LPS_Treatment" />

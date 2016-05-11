@@ -33,8 +33,6 @@ shell:
 
     '''
 fastqc !{read1} !{read2}
-ls -ltr 
-
 
     '''
 }
@@ -68,10 +66,10 @@ source $HOME/.bashrc \
 && echo "  with attribute KALLISTO_INDEX.INDEX.reference-build=GRCH38" \
 && echo "  with attribute KALLISTO_INDEX.INDEX.ensembl-version-number=82" \
 && ATTRIBUTES+="--attribute-value KALLISTO_INDEX.INDEX.organism=Homo_sapiens --attribute-value KALLISTO_INDEX.INDEX.reference-build=GRCH38 --attribute-value KALLISTO_INDEX.INDEX.ensembl-version-number=82 " \
-&& plugins-submit-job --plugins-dir $PLUGINS_ROOT_LOCATION --job-tag YSJBLPY --job-area $JOB_AREA --fileset-area $FILESET_AREA --owner $RESOURCE_OWNER --env-script $PLUGINS_ROOT_LOCATION/artifacts-config/env.sh $ATTRIBUTES --repository  $REPOSITORY_DIR --resource BASH_LIBRARY:1.0 --resource FETCH_URL:1.2 --resource KALLISTO:0.42.3 --resource ENSEMBL_TRANSCRIPTS:1.0 --resource KALLISTO_INDEX:0.42.3  > /dev/null 2>&1 \
-&& export JOB_DIR=$JOB_AREA/$RESOURCE_OWNER/Y/YSJBLPY > /dev/null 2>&1 \
-&& source $JOB_AREA/$RESOURCE_OWNER/Y/YSJBLPY/auto-options.sh > /dev/null 2>&1 \
-&& source $JOB_AREA/$RESOURCE_OWNER/Y/YSJBLPY/exports-all.sh > /dev/null 2>&1 \
+&& plugins-submit-job --plugins-dir $PLUGINS_ROOT_LOCATION --job-tag GRHVVSD --job-area $JOB_AREA --fileset-area $FILESET_AREA --owner $RESOURCE_OWNER --env-script $PLUGINS_ROOT_LOCATION/artifacts-config/env.sh $ATTRIBUTES --repository  $REPOSITORY_DIR --resource BASH_LIBRARY:1.0 --resource FETCH_URL:1.2 --resource KALLISTO:0.42.3 --resource ENSEMBL_TRANSCRIPTS:1.0 --resource KALLISTO_INDEX:0.42.3  > /dev/null 2>&1 \
+&& export JOB_DIR=$JOB_AREA/$RESOURCE_OWNER/G/GRHVVSD > /dev/null 2>&1 \
+&& source $JOB_AREA/$RESOURCE_OWNER/G/GRHVVSD/auto-options.sh > /dev/null 2>&1 \
+&& source $JOB_AREA/$RESOURCE_OWNER/G/GRHVVSD/exports-all.sh > /dev/null 2>&1 \
 && export ENSEMBL_TRANSCRIPTS_TOPLEVEL_ORGANISM_VALUE=HOMO_SAPIENS \
 && export ENSEMBL_TRANSCRIPTS_TOPLEVEL_REFERENCE_BUILD_VALUE=GRCH38 \
 && export ENSEMBL_TRANSCRIPTS_TOPLEVEL_ENSEMBL_VERSION_NUMBER_VALUE=82 \
@@ -105,7 +103,7 @@ file 'counts.tsv' into _combined
 
 shell:
 """
-cat << EOF > script6468360660610072140.R
+cat << EOF > script6183661814155178353.R
 # SCRIPT adapted from http://andrewtmckenzie.com/2015/05/12/how-to-run-kallisto-on-ncbi-sra-rna-seq-data-for-differential-expression-using-the-mac-terminal/ 
 if (!require("BiocInstaller")) {
   # Install bioconductor packages:
@@ -148,7 +146,7 @@ write.table(x=counts, file="counts.tsv", quote=FALSE, sep='\t', col.names = NA)
 
 
 EOF
-Rscript script6468360660610072140.R ${tsvs}
+Rscript script6183661814155178353.R ${tsvs}
 """
 }
 workflow.onComplete {

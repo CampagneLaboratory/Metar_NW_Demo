@@ -10,7 +10,7 @@
   </root>
   <root nodeRef="r:3d5ada8c-2c34-4299-8508-48cdaad8e76c(model)/328344664486154878">
     <file name="1_FastqKallistoCounts.nf">
-      <node id="328344664486154996" at="33,0,40,0" concept="2" />
+      <node id="328344664486154996" at="33,0,38,0" concept="2" />
     </file>
   </root>
   <root nodeRef="r:3d5ada8c-2c34-4299-8508-48cdaad8e76c(model)/3649526348551124133">
@@ -20,12 +20,12 @@
   </root>
   <root nodeRef="r:3d5ada8c-2c34-4299-8508-48cdaad8e76c(model)/5937854873901361884">
     <file name="1_FastqKallistoCounts.nf">
-      <node id="5937854873901361892" at="51,0,95,0" concept="0" />
+      <node id="5937854873901361892" at="49,0,93,0" concept="0" />
     </file>
   </root>
   <root nodeRef="r:3d5ada8c-2c34-4299-8508-48cdaad8e76c(model)/8328113964066216161">
     <file name="1_FastqKallistoCounts.nf">
-      <node id="8328113964066349542" at="107,0,153,0" concept="1" />
+      <node id="8328113964066349542" at="105,0,151,0" concept="1" />
     </file>
   </root>
 </debug-info>

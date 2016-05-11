@@ -1,20 +1,30 @@
-# Generated with MetaR, http://metaR.campagnelab.org, from script "Script" on Thu Feb 18 10:17:23 EST 2016
-
-
+# Generated with MetaR, http://metaR.campagnelab.org, from script "Script" on Wed May 11 18:10:17 EDT 2016
+ 
 libDir<-"/Users/fac2003/.metaRlibs"
- dir.create(file.path(libDir),showWarnings=FALSE,recursive=TRUE)
- .libPaths(c(libDir))
- dir.create(file.path("/Users/fac2003/R_RESULTS/model"),showWarnings=FALSE,recursive=TRUE)
- 
+dir.create(file.path(libDir)
+,showWarnings=FALSE,recursive=TRUE)
+
+.libPaths(c(libDir)
+)
+
+dir.create(file.path("/Users/fac2003/R_RESULTS/model")
+,showWarnings=FALSE,recursive=TRUE)
 
  
+ 
+if(!(require("limma")
+|require("edgeR")
+)){if(!require("BiocInstaller")
+){source("http://bioconductor.org/biocLite.R",local=TRUE)
+}
+biocLite(ask=FALSE,c("limma","edgeR")
+)
 
- if(!(require("limma")|require("edgeR"))){if(!require("BiocInstaller")){source("http://bioconductor.org/biocLite.R",local=TRUE)}
- biocLite(ask=FALSE,c("limma","edgeR"))
- library("limma")
- library("edgeR")}
+library("limma")
 
-
+library("edgeR")
+}
+ 
 
 queryBiomart_7676436067297133378<- function(){
 

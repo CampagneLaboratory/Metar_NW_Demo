@@ -64,6 +64,7 @@ sampleNames <- c("DC0904", "DC0907", "DCLPS0910", "DCLPS0913", "A_DC", "A_DC_LPS
   sampleNames <- colnames(countsTable)
   LPS_Treatment <- c( "LPS_no", "LPS_no", "LPS_yes", "LPS_yes", "LPS_no", "LPS_yes", "LPS_no", "LPS_yes", "LPS_no", "LPS_yes", "LPS_no", "LPS_yes", "LPS_no", "LPS_yes" )
 
+
   data <- DGEList(counts=countsTable, genes=rownames_for_CountsTable)
   data <- calcNormFactors(data)
  design <- model.matrix(~ 0 + LPS_Treatment) 
@@ -78,6 +79,14 @@ fit <- lmFit(voom, design)
 fit2 <-contrasts.fit(fit, contrasts=makeContrasts( LPS_TreatmentLPS_no-LPS_TreatmentLPS_yes, levels=design))
 fit3 <- eBayes(fit2) 
 
+normalized<-data.table(copy(voom$E))
+
+normalized$"gene" <- voom$gene[,1]
+previousColumns=colnames(normalized)
+numColumns=length(previousColumns)# make gene first column:
+newcols=c(previousColumns[numColumns :numColumns], previousColumns[1: (numColumns-1)]) #shift(colnames(normalized),1)
+newcols[1]="gene"
+setcolorder(normalized, newcols)
 
 # TODO: change the below line to use constrasts from the limmaVoom statement:
 Results <- data.table(topTable(fit3,coef=1, number=nrow(countsTable)))
@@ -120,7 +129,7 @@ cat("STATEMENT_EXECUTED/7676436067297087454/\n");
 tryCatch({
 setkey(GSE59364_DC_all.csv, "gene")
 setkey(subset, "genes")
-subset <- rename(subset, c("genes"="gene"))
+subset <- plyr::rename(subset, c("genes"="gene"))
 tableSuffixes=c("", "")
 joiningColumns=c("gene")
 nextTableToMergeInto=GSE59364_DC_all.csv
@@ -134,7 +143,7 @@ rm(mergedsubset)
 joined <- joined[,"genes":=joined$"gene"]
 
 # Add the rename back source columns
-subset <- rename(subset, c("gene"="genes"))
+subset <- plyr::rename(subset, c("gene"="genes"))
 write.table(joined,"/Users/fac2003/R_RESULTS/model/table_joined_0.tsv", row.names=FALSE, sep="\t") 
 }
 , warning = function(w) {
