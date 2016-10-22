@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="e633fc48-0aaf-45b5-9894-247b67cf0890" name="org.campagnelab.metar.biomart" version="0" />
-    <use id="5d6bde84-4ce4-4eb5-a37e-25a5edd55129" name="org.campagnelab.metar.tables" version="2" />
+    <use id="5d6bde84-4ce4-4eb5-a37e-25a5edd55129" name="org.campagnelab.metar.tables" version="3" />
     <use id="3b58810c-8431-4bbb-99ea-b4671e02dd13" name="org.campagnelab.metar.R" version="1" />
     <use id="5ec1cd3d-0a50-4049-a8fa-ae768d7baa25" name="org.campagnelab.mps.XChart" version="0" />
     <use id="43f31864-fc67-43f5-873e-ab79cc279a2d" name="org.campagnelab.styles" version="0" />
@@ -84,6 +84,11 @@
     <language id="040d3459-0033-45bb-b823-4cfd22657c15" name="org.campagnelab.metar.biomartToR">
       <concept id="5857936452045887397" name="org.campagnelab.metar.biomartToR.structure.BiomartinR" flags="ng" index="3ci$mf">
         <child id="5857936452045932777" name="biomartref" index="3cihF3" />
+      </concept>
+    </language>
+    <language id="95951e17-c0d6-47b9-b1b5-42a4ca186fc6" name="org.campagnelab.instantrefresh">
+      <concept id="1254484692210402710" name="org.campagnelab.instantrefresh.structure.IAtomic" flags="ng" index="16dhqS">
+        <property id="221363389440938160" name="ID" index="1MXi1$" />
       </concept>
     </language>
     <language id="ecc862c9-5ab5-42ef-8703-2039019fb338" name="org.campagnelab.metar.models">
@@ -212,9 +217,6 @@
       <concept id="6583618001716898910" name="org.campagnelab.metar.tables.structure.ScaleByRow" flags="ng" index="2Mr_BI" />
       <concept id="7783277237108572280" name="org.campagnelab.metar.tables.structure.FilterWithExpression" flags="ng" index="2Qf$4g">
         <child id="2826789978062873521" name="filter" index="QaakN" />
-      </concept>
-      <concept id="8962032619593737384" name="org.campagnelab.metar.tables.structure.Statement" flags="ng" index="S1EQ7">
-        <property id="8962032619593737385" name="id" index="S1EQ6" />
       </concept>
       <concept id="8962032619593737380" name="org.campagnelab.metar.tables.structure.Analysis" flags="ng" index="S1EQb">
         <property id="2742007948298959018" name="trycatch_enabled" index="2BDq$p" />
@@ -854,8 +856,8 @@
     <node concept="3ci$mf" id="6E8buU4fwd1" role="pZjJ2">
       <node concept="1JfIxH" id="6E8buU4fwd2" role="3cihF3">
         <property role="8NYsT" value="false" />
-        <property role="S1EQ6" value="ELRRXAXOQS" />
         <property role="12rW4U" value="http://www.ensembl.org" />
+        <property role="1MXi1$" value="ELRRXAXOQS" />
         <ref role="1L9wCD" node="6E8buU4fwfS" resolve="Mus musculus genes (GRCm38.p4)" />
         <ref role="1KrPA$" node="6E8buU4fwd6" resolve="Ensembl Genes 83" />
         <node concept="1KEnK8" id="6E8buU4fyXU" role="1KIcB_">
@@ -9721,12 +9723,12 @@
     <property role="2BDq$p" value="true" />
     <property role="TrG5h" value="diff exp" />
     <node concept="ZXjPh" id="6E8buU4fkXn" role="S1EQ8">
-      <property role="S1EQ6" value="MPNPDTEDPH" />
+      <property role="1MXi1$" value="MPNPDTEDPH" />
       <node concept="S1EQe" id="6E8buU4fkXo" role="ZXjPg">
-        <property role="S1EQ6" value="JGMRIABONI" />
+        <property role="1MXi1$" value="JGMRIABONI" />
       </node>
       <node concept="3MjoWR" id="6E8buU4fkXx" role="ZXjPg">
-        <property role="S1EQ6" value="GFTOCADRSA" />
+        <property role="1MXi1$" value="GFTOCADRSA" />
         <ref role="3Mj2Vh" node="6E8buU4fkHl" resolve="GSE59364_DC_all.csv" />
         <node concept="3MlLWZ" id="6E8buU4fkXA" role="3MjoVY">
           <property role="TrG5h" value="GSE59364_DC_all.csv" />
@@ -9735,7 +9737,7 @@
       </node>
       <node concept="3cumlZ" id="6E8buU4fkXC" role="ZXjPg">
         <property role="8NYsT" value="false" />
-        <property role="S1EQ6" value="WBWGWRGGWG" />
+        <property role="1MXi1$" value="WBWGWRGGWG" />
         <node concept="3MlLWZ" id="6E8buU4fkXD" role="3curr3">
           <property role="TrG5h" value="Results" />
           <ref role="3MlLW5" node="6E8buU4fkXE" resolve="Results" />
@@ -9989,7 +9991,7 @@
       </node>
       <node concept="3WuldX" id="6E8buU4fkZu" role="ZXjPg">
         <property role="8NYsT" value="false" />
-        <property role="S1EQ6" value="QMIMUBDNAF" />
+        <property role="1MXi1$" value="QMIMUBDNAF" />
         <node concept="3MlLWZ" id="6E8buU4fkZv" role="3W64wA">
           <property role="TrG5h" value="subset" />
           <ref role="3MlLW5" node="6E8buU4fkZw" resolve="subset" />
@@ -10054,7 +10056,7 @@
       </node>
       <node concept="3MoTRY" id="6E8buU4fmzh" role="ZXjPg">
         <property role="8NYsT" value="false" />
-        <property role="S1EQ6" value="YSNEFDOKOT" />
+        <property role="1MXi1$" value="YSNEFDOKOT" />
         <node concept="3MlLWZ" id="6E8buU4fmzk" role="3Mq1V4">
           <property role="TrG5h" value="joined" />
           <ref role="3MlLW5" node="6E8buU4fmzl" resolve="joined" />
@@ -10305,7 +10307,7 @@
         </node>
       </node>
       <node concept="1FHY16" id="6E8buU4fmIk" role="ZXjPg">
-        <property role="S1EQ6" value="UQVETJSCUB" />
+        <property role="1MXi1$" value="UQVETJSCUB" />
         <ref role="L_9Jz" node="6E8buU4fq08" resolve="HeatmapStyle" />
         <node concept="1FHg$p" id="6E8buU4fmIm" role="1FHg$q">
           <property role="ZHjxa" value="400" />
@@ -10334,11 +10336,11 @@
         </node>
       </node>
       <node concept="313sG1" id="6XwKyRrYvrT" role="ZXjPg">
-        <property role="S1EQ6" value="PSLLDQBXQR" />
         <property role="313rra" value="1" />
         <property role="313rrk" value="1" />
         <property role="TrG5h" value="preciew" />
         <property role="31lnkE" value="true" />
+        <property role="1MXi1$" value="PSLLDQBXQR" />
         <node concept="1FHg$p" id="6XwKyRrYvun" role="319mBM">
           <property role="ZHjxa" value="200" />
           <property role="ZHjG8" value="200" />
@@ -10350,7 +10352,7 @@
         </node>
       </node>
       <node concept="3wL1ft" id="6E8buU4fr4B" role="ZXjPg">
-        <property role="S1EQ6" value="NYPEQAMLRQ" />
+        <property role="1MXi1$" value="NYPEQAMLRQ" />
         <ref role="L_9Jz" node="6E8buU4fr77" resolve="ScatterPlotStyle" />
         <node concept="1FHg$p" id="6E8buU4fr4C" role="3wKG7v">
           <property role="ZHjxa" value="500" />
@@ -10369,9 +10371,9 @@
         </node>
       </node>
       <node concept="SsgEw" id="6E8buU4foqQ" role="ZXjPg">
-        <property role="S1EQ6" value="CUJOAADTRI" />
         <property role="165MX6" value="8" />
         <property role="165MyL" value="10" />
+        <property role="1MXi1$" value="CUJOAADTRI" />
         <ref role="Ss6T5" node="6E8buU4fmIm" resolve="heatmap" />
         <node concept="2jXUOv" id="6E8buU4foqS" role="2jX3UN">
           <property role="2jXUS1" value="heatmap.pdf" />
@@ -10379,12 +10381,12 @@
         <node concept="Ss6Tf" id="6E8buU4fot5" role="Ss6Td" />
       </node>
       <node concept="S1EQe" id="6E8buU4frgj" role="ZXjPg">
-        <property role="S1EQ6" value="YYRYTOAQVQ" />
+        <property role="1MXi1$" value="YYRYTOAQVQ" />
       </node>
       <node concept="1JfIxH" id="6E8buU4frkO" role="ZXjPg">
         <property role="8NYsT" value="false" />
-        <property role="S1EQ6" value="JKSBLYKONI" />
         <property role="12rW4U" value="http://www.ensembl.org" />
+        <property role="1MXi1$" value="JKSBLYKONI" />
         <ref role="1KrPA$" node="6E8buU4frkT" resolve="Ensembl Genes 83" />
         <ref role="1L9wCD" node="6E8buU4fron" resolve="Mus musculus genes (GRCm38.p4)" />
         <node concept="1KEnK8" id="6ULHXPF1Asl" role="1KIcB_">
